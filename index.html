@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EstateVista is a modern real estate website concept for discovering beautiful properties.">
+  <title>EstateVista | Find Your Place</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    Discover a place you'll love calling home.
+  </div>
+
+  <header class="header">
+    <a href="#" class="logo">Estate<span>Vista.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#properties" class="header-button">Explore Homes</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">FIND YOUR PERFECT PLACE</span>
+        <h1>Discover a home that feels like <span>you.</span></h1>
+        <p>
+          Explore thoughtfully selected properties and find
+          a space that matches your lifestyle and dreams.
+        </p>
+        <a href="#properties" class="primary-btn">Explore Properties</a>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="search-box">
+        <div class="search-field">
+          <label for="locationSearch">Location</label>
+          <input type="text" id="locationSearch" placeholder="Search city or area">
+        </div>
+
+        <div class="search-field">
+          <label for="typeSearch">Property Type</label>
+          <select id="typeSearch">
+            <option value="all">All properties</option>
+            <option value="house">Houses</option>
+            <option value="apartment">Apartments</option>
+            <option value="villa">Villas</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="priceSearch">Maximum Price</label>
+          <select id="priceSearch">
+            <option value="all">Any price</option>
+            <option value="300000">$300,000</option>
+            <option value="500000">$500,000</option>
+            <option value="800000">$800,000</option>
+          </select>
+        </div>
+
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
+    </section>
+
+    <section class="properties section-padding" id="properties">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE OUR COLLECTION</span>
+          <h2>Featured Properties</h2>
+          <p>Find a property that fits your next chapter.</p>
+        </div>
+        <span class="property-count" id="propertyCount">6 Properties</span>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="house">Houses</button>
+        <button class="filter-btn" data-filter="apartment">Apartments</button>
+        <button class="filter-btn" data-filter="villa">Villas</button>
+      </div>
+
+      <div class="property-grid" id="propertyGrid">
+
+        <article class="property-card"
+          data-type="house"
+          data-location="los angeles california"
+          data-price="450000">
+
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900" alt="Modern family house">
+            <span class="property-tag">For Sale</span>
+          </div>
+          <div class="property-info">
+            <span class="property-type">FAMILY HOME</span>
+            <h3>Modern Family Residence</h3>
+            <p class="property-location">Los Angeles, California</p>
+            <div class="property-details">
+              <span>🛏 4 Beds</span>
+              <span>🛁 3 Baths</span>
+              <span>2,400 sqft</span>
+            </div>
+            <div class="property-bottom">
+              <strong>$450,000</strong>
+              <button class="details-btn"
+                data-name="Modern Family Residence"
+                data-location="Los Angeles, California"
+                data-price="$450,000"
+                data-description="A spacious family home with a welcoming design, comfortable bedrooms and a beautiful outdoor area.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="apartment"
+          data-location="new york manhattan"
+          data-price="320000">
+
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900" alt="Contemporary luxury apartment">
+            <span class="property-tag">For Sale</span>
+          </div>
+          <div class="property-info">
+            <span class="property-type">CITY APARTMENT</span>
+            <h3>Urban Luxury Apartment</h3>
+            <p class="property-location">Manhattan, New York</p>
+            <div class="property-details">
+              <span>🛏 2 Beds</span>
+              <span>🛁 2 Baths</span>
+              <span>1,250 sqft</span>
+            </div>
+            <div class="property-bottom">
+              <strong>$320,000</strong>
+              <button class="details-btn"
+                data-name="Urban Luxury Apartment"
+                data-location="Manhattan, New York"
+                data-price="$320,000"
+                data-description="A stylish city apartment with a contemporary interior and convenient urban living.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="villa"
+          data-location="miami florida"
+          data-price="780000">
+
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900" alt="Luxury modern villa with pool">
+            <span class="property-tag">For Sale</span>
+          </div>
+          <div class="property-info">
+            <span class="property-type">LUXURY VILLA</span>
+            <h3>Coastal Dream Villa</h3>
+            <p class="property-location">Miami, Florida</p>
+            <div class="property-details">
+              <span>🛏 5 Beds</span>
+              <span>🛁 4 Baths</span>
+              <span>3,600 sqft</span>
+            </div>
+            <div class="property-bottom">
+              <strong>$780,000</strong>
+              <button class="details-btn"
+                data-name="Coastal Dream Villa"
+                data-location="Miami, Florida"
+                data-price="$780,000"
+                data-description="A beautiful villa concept featuring spacious living areas and an inviting outdoor pool.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="house"
+          data-location="austin texas"
+          data-price="285000">
+
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900" alt="Contemporary suburban house">
+            <span class="property-tag">For Sale</span>
+          </div>
+          <div class="property-info">
+            <span class="property-type">MODERN HOME</span>
+            <h3>Contemporary Suburban Home</h3>
+            <p class="property-location">Austin, Texas</p>
+            <div class="property-details">
+              <span>🛏 3 Beds</span>
+              <span>🛁 2 Baths</span>
+              <span>1,950 sqft</span>
+            </div>
+            <div class="property-bottom">
+              <strong>$285,000</strong>
+              <button class="details-btn"
+                data-name="Contemporary Suburban Home"
+                data-location="Austin, Texas"
+                data-price="$285,000"
+                data-description="A comfortable modern home with practical living spaces and a peaceful neighborhood setting.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="apartment"
+          data-location="london england"
+          data-price="490000">
+
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=900" alt="Elegant apartment interior">
+            <span class="property-tag">For Sale</span>
+          </div>
+          <div class="property-info">
+            <span class="property-type">PREMIUM APARTMENT</span>
+            <h3>Elegant City Residence</h3>
+            <p class="property-location">London, England</p>
+            <div class="property-details">
+              <span>🛏 3 Beds</span>
+              <span>🛁 2 Baths</span>
+              <span>1,700 sqft</span>
+            </div>
+            <div class="property-bottom">
+              <strong>$490,000</strong>
+              <button class="details-btn"
+                data-name="Elegant City Residence"
+                data-location="London, England"
+                data-price="$490,000"
+                data-description="An elegant apartment concept with carefully designed interiors and generous living space.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="villa"
+          data-location="bali indonesia"
+          data-price="650000">
+
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=900" alt="Modern tropical villa">
+            <span class="property-tag">For Sale</span>
+          </div>
+          <div class="property-info">
+            <span class="property-type">TROPICAL VILLA</span>
+            <h3>Serene Garden Villa</h3>
+            <p class="property-location">Bali, Indonesia</p>
+            <div class="property-details">
+              <span>🛏 4 Beds</span>
+              <span>🛁 3 Baths</span>
+              <span>2,900 sqft</span>
+            </div>
+            <div class="property-bottom">
+              <strong>$650,000</strong>
+              <button class="details-btn"
+                data-name="Serene Garden Villa"
+                data-location="Bali, Indonesia"
+                data-price="$650,000"
+                data-description="A tropical villa concept surrounded by greenery, with spacious rooms and relaxing outdoor spaces.">
+                View Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults">
+        No matching properties found. Try changing your search.
+      </p>
+    </section>
+
+    <section class="about section-padding" id="about">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1000" alt="Beautiful modern home interior">
+      </div>
+
+      <div class="about-content">
+        <span class="eyebrow">ABOUT ESTATEVISTA</span>
+        <h2>More than properties. A place to belong.</h2>
+        <p>
+          We believe finding a home should feel exciting.
+          EstateVista brings beautiful property concepts together
+          in one simple and welcoming experience.
+        </p>
+        <p>
+          Browse our featured collection and explore the
+          possibilities of your next home.
+        </p>
+        <a href="#properties" class="primary-btn">Explore Listings</a>
+      </div>
+    </section>
+
+    <section class="contact section-padding" id="contact">
+      <span class="eyebrow">LET'S CONNECT</span>
+      <h2>Have a property in mind?</h2>
+      <p>Send an enquiry and explore your next move.</p>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="contactName" placeholder="Your name" required>
+        <input type="email" id="contactEmail" placeholder="Your email address" required>
+        <textarea id="contactMessage" placeholder="Tell us what you're looking for..." required></textarea>
+        <button type="submit" class="primary-btn">Send Enquiry</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo">Estate<span>Vista.</span></a>
+    <p>A real estate website concept designed by Nexora Digital.</p>
+    <p class="demo-note">Demo project. Properties, prices and company information are fictional examples.</p>
+    <p>© 2026 EstateVista. Demo concept.</p>
+  </footer>
+
+  <div class="modal" id="propertyModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
+      <span class="eyebrow">PROPERTY DETAILS</span>
+      <h2 id="modalName">Property Name</h2>
+      <p id="modalLocation"></p>
+      <strong id="modalPrice"></strong>
+      <p id="modalDescription"></p>
+      <a href="#contact" class="primary-btn" id="modalEnquire">Enquire About This Property</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
